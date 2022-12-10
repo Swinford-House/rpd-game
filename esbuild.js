@@ -2,7 +2,7 @@ const copyStaticFiles = require("esbuild-copy-static-files");
 
 require("esbuild")
   .build({
-    entryPoints: ["src/index.tsx"],
+    entryPoints: ["src/index.ts"],
     outdir: "dist",
     bundle: true,
     // minify: true,
@@ -12,7 +12,7 @@ require("esbuild")
     plugins: [
       copyStaticFiles({
         src: "./src/public",
-        dest: "./dist",
+        dest: "./dist/public",
       }),
     ],
   })
